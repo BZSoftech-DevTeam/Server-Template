@@ -6,7 +6,7 @@ require("dotenv").config({ path: "./config.env" })
 const URI = process.env.DATABASE;
 
 const connectToDB = mongoose.connect(URI).then(() => {
-    console.log("✨ ================== Connected to Dummy Database ================== ✨");
+    console.log("✨ ================== Connected to CCET Database ================== ✨");
 }).catch((err) => {
     console.log("Error Connecting Database!", err);
 })

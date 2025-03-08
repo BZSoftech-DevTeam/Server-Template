@@ -1,40 +1,28 @@
 const mongoose = require("mongoose");
 
-const userStatisticsSchema = new mongoose.Schema(
+const schoolInfoSchema = new mongoose.Schema(
   {
-    userType: {
+    school_ID: {
       type: String,
       required: true,
     },
-    image: {
-        type: String,
-        required: true
-    },
-    firstName: {
+    englishSchool: {
       type: String,
       required: true,
     },
-    secondName: {
+    arabicSchool: {
       type: String,
       required: true,
     },
-    lastName: {
+    state: {
       type: String,
       required: true,
     },
-    CIVIL_ID: {
+    city: {
       type: String,
       required: true,
     },
-    username: {
-      type: String,
-      required: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    email: {
+    eduAreas: {
       type: String,
       required: true,
     },
@@ -42,7 +30,7 @@ const userStatisticsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    expiryDate: {
+    condition: {
       type: String,
       required: true,
     },
@@ -50,5 +38,5 @@ const userStatisticsSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const USD = mongoose.model("user-information", userStatisticsSchema);
-module.exports = USD;
+const SCH = mongoose.model("school-information", schoolInfoSchema);
+module.exports =SCH;
